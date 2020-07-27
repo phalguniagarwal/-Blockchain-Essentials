@@ -1,0 +1,33 @@
+
+link: 0xB198465e13D8A0636390e00CcF70761FFEB2C1d5
+
+
+
+
+pragma solidity ^0.4.17 < 0.6.12; 
+
+contract ReportCard{
+    
+    string public name;
+    uint public rollnum;
+    string public batch;
+    int public marks;
+    string status;
+    
+    function ReportCard(string newName, uint newRollnum, string newBatch, int newMarks, string newStatus ) public {
+        
+        name = newName;
+        rollnum= newRollnum;
+        batch = newBatch;
+        marks= newMarks;
+        status=newStatus;
+        
+    }
+    
+    
+    function getCurrentDetails() public view returns(string, uint, string, int, string) {
+        return (name, rollnum, batch, marks, status);
+    }
+    
+}
+
